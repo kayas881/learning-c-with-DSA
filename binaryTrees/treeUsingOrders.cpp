@@ -1,5 +1,11 @@
-#include "bits/stdc++.h"
-using namespace std;
+#include <iostream>   // For standard I/O operations
+#include <vector>     // For using std::vector
+#include <string>     // For using std::string
+#include <map>        // For using std::map
+#include <set>        // For using std::set
+#include <algorithm>  // For using algorithms like sort, find, etc.
+#include <utility>    // For using std::pair and other utility functions
+using namespace std;  // Namespace for using the standard library
 
 
 #include <iostream>
