@@ -69,6 +69,37 @@ bool isBalanced(Node* root){
 
 }
 
+// this function is used to check if the tree is balanced or not
+// it takes a node as an argument and a reference to an integer height
+// if the node is NULL, it returns true and sets the height to 0
+// otherwise, it checks if the left and right subtrees are balanced
+// if they are balanced, it calculates the height of the left and right subtrees
+// and checks if the difference between the heights is less than or equal to 1
+// if it is, it sets the height to the maximum of the left and right heights + 1
+// and returns true, otherwise, it returns false
+// the time complexity of this function is O(n)
+bool isBalancedOptimized(Node* root, int* height){
+    if(root == NULL){
+        *height = 0;
+        return true;
+    }
+
+    int lh = 0, rh = 0;
+    if(isBalancedOptimized(root->left, &lh) == false){
+        return false;
+    } 
+    if(isBalancedOptimized(root->right, &rh) == false){
+        return false;
+    } 
+
+    *height = max(lh, rh) + 1;
+    if(abs(lh - rh) <= 1){
+        return true;
+    } else {
+        return false;
+    }
+
+}
 
 /*
       tree structure
